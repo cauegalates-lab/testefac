@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b0c">
+  <title>Face ID Web Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="lockScreen" class="screen lock-screen">
+    <div class="content">
+      <div class="face-icon" aria-hidden="true">
+        <svg viewBox="0 0 120 120" fill="none">
+          <path d="M35 14H26c-7 0-12 5-12 12v9"/>
+          <path d="M85 14h9c7 0 12 5 12 12v9"/>
+          <path d="M35 106H26c-7 0-12-5-12-12v-9"/>
+          <path d="M85 106h9c7 0 12-5 12-12v-9"/>
+          <path d="M44 49v7"/>
+          <path d="M76 49v7"/>
+          <path d="M60 48v18c0 4-3 7-7 7h-2"/>
+          <path d="M43 82c5 6 11 9 17 9s12-3 17-9"/>
+        </svg>
+      </div>
+
+      <p class="eyebrow">ACESSO SEGURO</p>
+      <h1>Face ID</h1>
+      <p class="subtitle">Olhe para o iPhone para desbloquear o conteúdo.</p>
+
+      <button id="unlockBtn" class="primary">Entrar com Face ID</button>
+      <button id="registerBtn" class="secondary">Cadastrar neste aparelho</button>
+
+      <p id="status" class="status">Primeiro cadastre a credencial neste aparelho.</p>
+      <p class="hint">Use Safari no iPhone e uma URL HTTPS.</p>
+    </div>
+  </main>
+
+  <main id="homeScreen" class="screen home-screen hidden">
+    <header class="topbar">
+      <div>
+        <span class="small">Acesso confirmado</span>
+        <h2>Área protegida</h2>
+      </div>
+      <button id="lockBtn" class="icon-btn" aria-label="Bloquear">🔒</button>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="badge">✓ Face ID verificado</span>
+        <h3>Bem-vindo</h3>
+        <p>Esse conteúdo só aparece depois da autenticação do aparelho.</p>
+      </div>
+    </section>
+
+    <section class="list">
+      <button class="row">
+        <span class="row-icon">👤</span>
+        <span>
+          <strong>Meu perfil</strong>
+          <small>Dados da sua conta</small>
+        </span>
+        <span class="chev">›</span>
+      </button>
+
+      <button class="row">
+        <span class="row-icon">📄</span>
+        <span>
+          <strong>Conteúdo privado</strong>
+          <small>Informações liberadas após o Face ID</small>
+        </span>
+        <span class="chev">›</span>
+      </button>
+
+      <button class="row">
+        <span class="row-icon">🛡️</span>
+        <span>
+          <strong>Segurança</strong>
+          <small>Protegido pela autenticação do aparelho</small>
+        </span>
+        <span class="chev">›</span>
+      </button>
+    </section>
+
+    <section class="demo-card">
+      <span class="small">CONTEÚDO DE TESTE</span>
+      <h3>Área interna liberada</h3>
+      <p>
+        Aqui você pode colocar painel, treinos, documentos, dados do usuário
+        ou qualquer outra área privada do seu sistema.
+      </p>
+    </section>
+
+    <button id="lockAgainBtn" class="primary bottom-btn">Bloquear e testar novamente</button>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

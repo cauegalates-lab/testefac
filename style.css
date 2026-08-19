@@ -1,0 +1,85 @@
+*{box-sizing:border-box}
+:root{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#0b0b0c;color:#f5f5f7
+}
+html,body{margin:0;min-height:100%;background:#0b0b0c}
+body{min-height:100dvh}
+button{font:inherit}
+.screen{min-height:100dvh}
+.hidden{display:none!important}
+
+.lock-screen{
+  display:flex;align-items:center;justify-content:center;
+  padding:26px 22px max(26px,env(safe-area-inset-bottom));
+  background:
+    radial-gradient(circle at 50% 20%,rgba(255,255,255,.08),transparent 30%),
+    #0b0b0c
+}
+.content{width:100%;max-width:390px;text-align:center}
+.face-icon{
+  width:116px;height:116px;margin:0 auto 28px;
+  border-radius:32px;display:grid;place-items:center;
+  background:linear-gradient(180deg,#18181b,#111113);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),0 20px 60px rgba(0,0,0,.38)
+}
+.face-icon svg{
+  width:78px;height:78px;stroke:#fff;stroke-width:5.2;
+  stroke-linecap:round;stroke-linejoin:round
+}
+.eyebrow,.small{font-size:12px;letter-spacing:.14em;color:#88888f;font-weight:700}
+h1{font-size:36px;line-height:1.05;margin:0;letter-spacing:-.035em}
+.subtitle{margin:14px auto 32px;max-width:290px;color:#aaaab1;line-height:1.5}
+.primary,.secondary{
+  width:100%;min-height:56px;border-radius:18px;font-weight:750;
+  transition:.15s transform ease,.15s opacity ease;cursor:pointer
+}
+.primary:active,.secondary:active{transform:scale(.985)}
+.primary{border:0;background:#f5f5f7;color:#0a0a0b}
+.secondary{
+  margin-top:12px;background:transparent;color:#e4e4e7;
+  border:1px solid rgba(255,255,255,.13)
+}
+.status{min-height:42px;margin:22px 8px 0;color:#c7c7cc;font-size:14px;line-height:1.45}
+.status.ok{color:#86efac}.status.error{color:#ff9a8f}
+.hint{font-size:12px;color:#66666b;margin:8px 10px 0;line-height:1.4}
+
+.home-screen{
+  padding:calc(18px + env(safe-area-inset-top)) 18px max(24px,env(safe-area-inset-bottom));
+  background:#0b0b0c
+}
+.topbar{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  margin-bottom:20px
+}
+.topbar h2{font-size:28px;margin:4px 0 0;letter-spacing:-.03em}
+.icon-btn{
+  width:44px;height:44px;border-radius:14px;border:1px solid rgba(255,255,255,.1);
+  background:#151517;color:white
+}
+.hero,.demo-card,.list{
+  background:#141416;border:1px solid rgba(255,255,255,.06);
+  border-radius:22px
+}
+.hero{padding:22px;margin-bottom:16px}
+.badge{
+  display:inline-block;padding:7px 10px;border-radius:999px;
+  background:rgba(34,197,94,.12);color:#86efac;font-size:12px;font-weight:700
+}
+.hero h3{font-size:26px;margin:18px 0 8px}
+.hero p,.demo-card p{color:#aaaab1;line-height:1.55;margin:0}
+
+.list{overflow:hidden;margin-bottom:16px}
+.row{
+  width:100%;display:flex;align-items:center;gap:14px;
+  min-height:76px;padding:0 16px;border:0;background:transparent;color:white;text-align:left
+}
+.row+.row{border-top:1px solid rgba(255,255,255,.07)}
+.row-icon{font-size:22px;width:28px;text-align:center}
+.row span:nth-child(2){display:flex;flex-direction:column;gap:4px;flex:1}
+.row strong{font-size:16px}
+.row small{font-size:13px;color:#8f8f95}
+.chev{font-size:27px;color:#55555b}
+.demo-card{padding:20px;margin-bottom:18px}
+.demo-card h3{font-size:20px;margin:8px 0 8px}
+.bottom-btn{margin-top:4px}
