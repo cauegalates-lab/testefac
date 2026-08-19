@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0b" />
+  <title>Face ID Login Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="login">
+      <div class="face-wrap" aria-hidden="true">
+        <svg class="face-id" viewBox="0 0 120 120" fill="none">
+          <path d="M35 14H26c-7 0-12 5-12 12v9"/>
+          <path d="M85 14h9c7 0 12 5 12 12v9"/>
+          <path d="M35 106H26c-7 0-12-5-12-12v-9"/>
+          <path d="M85 106h9c7 0 12-5 12-12v-9"/>
+          <path d="M44 49v7"/>
+          <path d="M76 49v7"/>
+          <path d="M60 48v18c0 4-3 7-7 7h-2"/>
+          <path d="M43 82c5 6 11 9 17 9s12-3 17-9"/>
+        </svg>
+      </div>
+
+      <p class="eyebrow">ACESSO SEGURO</p>
+      <h1>Bem-vindo</h1>
+      <p class="subtitle">Use o Face ID do seu iPhone para entrar rapidamente.</p>
+
+      <button id="loginBtn" class="primary">Entrar com Face ID</button>
+      <button id="registerBtn" class="secondary">Cadastrar Face ID neste aparelho</button>
+
+      <p id="status" class="status">Cadastre primeiro e depois teste o acesso.</p>
+      <p class="hint">No iPhone, abra pelo Safari em uma página HTTPS.</p>
+    </section>
+  </main>
+
+  <div id="success" class="success-screen" hidden>
+    <div class="success-icon">✓</div>
+    <h2>Acesso liberado</h2>
+    <p>Reconhecimento concluído com sucesso.</p>
+    <button id="backBtn" class="primary small">Voltar</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
